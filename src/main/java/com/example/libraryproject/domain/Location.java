@@ -1,20 +1,14 @@
 package com.example.libraryproject.domain;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Entity
-@Table(name = "address")
-public class Address {
+public class Location {
     @Id
-    @Column(name = "address_id")
-    private Integer addressId;
+    @Column(name = "location_id")
+    private Integer locationId;
 
     @NonNull
     @Column(name = "street")
@@ -30,6 +24,7 @@ public class Address {
 
     @OneToOne
     @MapsId
-    @JoinColumn(name = "student_id")
-    private Student student;
+    @JoinColumn(name = "library_id")
+    private Library library;
+
 }

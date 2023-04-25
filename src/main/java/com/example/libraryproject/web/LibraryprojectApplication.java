@@ -1,4 +1,4 @@
-package com.example.libraryproject;
+package com.example.libraryproject.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
