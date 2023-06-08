@@ -39,6 +39,9 @@ public class Library {
     @OneToMany(mappedBy = "library", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<LibraryStudent> libraryStudents = new HashSet<>();
 
+    @OneToOne(mappedBy = "library", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Location location;
+
     public boolean isActive(){
         return this.isActive;
     }
@@ -107,5 +110,14 @@ public class Library {
 
     public Set<LibraryStudent> getLibraryStudents() {
         return libraryStudents;
+    }
+
+    public boolean hasLocation() {
+        return Objects.nonNull(this.location);
+    }
+
+    public void unsetRelationship(Location location) {
+        this.location = null;
+        location.setLibrary(null);
     }
 }

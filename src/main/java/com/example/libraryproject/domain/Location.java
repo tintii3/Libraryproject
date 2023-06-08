@@ -1,10 +1,16 @@
 package com.example.libraryproject.domain;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "location")
 public class Location {
     @Id
     @Column(name = "location_id")

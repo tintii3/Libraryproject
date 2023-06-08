@@ -12,13 +12,13 @@ import lombok.experimental.Accessors;
 @AllArgsConstructor
 @Accessors(chain = true, fluent = true)
 public class LibraryCriteria {
-    private boolean includeBook;
+    private boolean includeStudent;
 
-    public boolean isIncludeBook() {
-        return includeBook;
+    public boolean isIncludeStudent() {
+        return includeStudent;
     }
 
-    public void setIncludeBook(boolean includeBook) {
-        this.includeBook = includeBook;
+    public void setIncludeStudent(boolean includeStudent) {
+        this.includeStudent = includeStudent;
     }
 }

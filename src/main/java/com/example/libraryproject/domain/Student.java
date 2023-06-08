@@ -64,7 +64,7 @@ public class Student {
     public void activate() {
         this.isActive = true;
     }
-    public void deActivate() {
+    public void deactivate() {
         this.isActive = false;
     }
 
